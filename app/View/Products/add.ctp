@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
     <div class="panel-body mb-3">
-        <form action="/cakephp/products/add" id="frm-add-product" method="post">
+        <form action="/products/add" id="frm-add-product" method="post">
             <div class="row custom-padding">
                 <div class="col-sm-6">
                     <label>Name</label>
