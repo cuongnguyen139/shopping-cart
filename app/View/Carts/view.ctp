@@ -26,7 +26,7 @@
 								)); ?>
 							</div>
 						</td>
-						<td>$<?php echo $count * $product['Product']['price']; ?>
+						<td>€<?php echo $count * $product['Product']['price']; ?>
 						</td>
 					</tr>
 					<?php $total = $total + ($count * $product['Product']['price']); ?>
@@ -34,7 +34,7 @@
 
 				<tr class="success">
 					<td colspan=3></td>
-					<td>$<?php echo $total; ?>
+					<td>€<?php echo $total; ?>
 					</td>
 				</tr>
 			</tbody>
