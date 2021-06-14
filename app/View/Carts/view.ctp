@@ -15,7 +15,7 @@
 				<?php foreach ($products as $product) : ?>
 					<tr>
 						<td><?php echo $product['Product']['name']; ?></td>
-						<td>$<?php echo $product['Product']['price']; ?>
+						<td>€<?php echo $product['Product']['price']; ?>
 						</td>
 						<td>
 							<div class="col-xs-3">
