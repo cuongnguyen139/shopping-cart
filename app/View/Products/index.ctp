@@ -22,18 +22,27 @@
 			<li><a class="dropdown-item" href="/products?sort=code">Code</a></li>
 		</ul>
 	</div>
-	<div><a class="btn btn-secondary" href="/products/add" role="button">Add a product</a></div>
+	<div><a class="btn btn-secondary" href="/cakephp/products/add" role="button">Add a product</a></div>
 </div>
 
 <div class="row mt-5">
 	<?php foreach ($products as $product) : ?>
 		<div class="col-sm-6 col-md-4">
 			<div class="">
-				<?php echo $this->Html->link(
-					$this->Html->image($product['Product']['image']),
-					array('action' => 'view', $product['Product']['id']),
-					array('escape' => false, 'class' => 'thumbnail')
-				); ?>
+				<?php
+				if (file_exists(trim($product['Product']['image'], '/'))) {
+					echo $this->Html->link(
+						$this->Html->image($product['Product']['image']),
+						array('action' => 'view', $product['Product']['id']),
+						array('escape' => false, 'class' => 'thumbnail')
+					);
+				} else {
+					echo $this->Html->link(
+						$this->Html->image('/img/default.jpg'),
+						array('action' => 'view', $product['Product']['id']),
+						array('escape' => false, 'class' => 'thumbnail')
+					);
+				} ?>
 				<div class="caption">
 					<h5>
 						<?php echo $product['Product']['name']; ?>
